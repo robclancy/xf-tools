@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "bigelephant/xf-console": "2.2.*"
+        "bigelephant/xf-console": "*"
     },
     "autoload": {
         "psr-0": {
