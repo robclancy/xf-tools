@@ -1,0 +1,19 @@
+{
+    "name": "bigelephant/xf-tools",
+    "keywords": ["xenforo"],
+    "authors": [
+        {
+            "name": "Robbo",
+            "email": "robert@mercenarydesign.net"
+        }
+    ],
+    "require": {
+        "bigelephant/xf-console": "2.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "BigElephant\\XfTools": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}

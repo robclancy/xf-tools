@@ -1,4 +1,4 @@
-xf-tools
-========
+XenForo Development Tools
+==========
 
-Development tools to help developing your app
+A bunch of dev tools to help with XenForo development.
