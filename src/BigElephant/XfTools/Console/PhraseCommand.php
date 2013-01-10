@@ -14,24 +14,33 @@ class PhraseCommand extends Command {
 
 	protected $phraseModel;
 
+	public function __construct(Phrase $phrase = null)
+	{
+		parent::__construct();
+
+		if ($phrase === null)
+		{
+			$phrase = new Phrase;
+		}
+
+		$this->phraseModel = $phrase;
+	}
+
 	public function fire()
 	{
-		$this->phraseModel = new Phrase;
-
 		$title = $this->argument('title');
 		if ( ! $title)
 		{
 			$title = $this->ask('Phrase Title:');
 		}
 
-		// TODO: check if phrase exists
+		// TODO: check if phrase exists here instead of when inserting
 
 		$text = $this->argument('text');
 		if ( ! $text)
 		{
 			$text = $this->ask('Text:');
 		}
-
 
 		$global = strtolower($this->ask('Globally Cached? [N, y]')) == 'y';
 

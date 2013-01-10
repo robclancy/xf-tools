@@ -4,7 +4,7 @@ use XenForo_DataWriter;
 use XenForo_Model;
 use XenForo_Application;
 
-abstract class Model extends XenForo_Model {
+abstract class Model {
 
 	protected function getDw($dw)
 	{
