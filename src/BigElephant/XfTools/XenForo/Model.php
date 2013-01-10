@@ -16,7 +16,7 @@ abstract class Model {
 		return XenForo_DataWriter::create($dw);
 	}
 
-	protected function getXfModel($model)
+	protected function getModel($model)
 	{
 		if (strpos($model, '_') === false)
 		{
@@ -29,5 +29,15 @@ abstract class Model {
 	protected function getConfig()
 	{
 		return XenForo_Application::getConfig();
+	}
+
+	protected function getDb()
+	{
+		return XenForo_Application::getDb();
+	}
+
+	protected function getApp()
+	{
+		return XenForo_Application::getInstance();
 	}
 }

@@ -4,7 +4,7 @@ class Phrase extends Model {
 
 	public function insert($title, $text, $global = false, $addonId = false)
 	{
-		if ($this->xfPhraseModel()->getPhraseInLanguageByTitle($title))
+		if ($this->getModel('Phrase')->getPhraseInLanguageByTitle($title))
 		{
 			throw new \Exception('Failed, phrase already exists');
 		}
@@ -23,10 +23,5 @@ class Phrase extends Model {
 		$dw->save();
 
 		return 'Phrase inserted!';
-	}
-
-	protected function xfPhraseModel()
-	{
-		return $this->getXfModel('Phrase');
 	}
 }
