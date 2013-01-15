@@ -10,18 +10,13 @@ class PhraseCommand extends Command {
 
 	protected $name = 'phrase';
 
-	protected $description = 'Add a phrase to your install.';
+	protected $description = 'Add a phrase to your install';
 
 	protected $phraseModel;
 
-	public function __construct(Phrase $phrase = null)
+	public function __construct(Phrase $phrase)
 	{
 		parent::__construct();
-
-		if ($phrase === null)
-		{
-			$phrase = new Phrase;
-		}
 
 		$this->phraseModel = $phrase;
 	}
